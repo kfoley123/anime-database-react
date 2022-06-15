@@ -5,6 +5,7 @@ export default function Main() {
     const [rating, setRating] = useState("");
     const [animeType, setAnimeType] = useState("");
     const [status, setStatus] = useState("");
+    const [anime, setAnime] = useState([]);
 
     function handleTextBox(event) {
         setSearchBoxText(event.target.value);
@@ -23,6 +24,11 @@ export default function Main() {
 
     function search() {
         console.log({ searchBoxText, rating, animeType, status });
+        fetch(
+            `https://api.jikan.moe/v4/anime?q=${searchBoxText}&rating=${rating}&type=${animeType}&status=${status}`
+        )
+            .then((response) => response.json())
+            .then((response) => setAnime(response.data));
     }
 
     return (
@@ -74,6 +80,11 @@ export default function Main() {
                 </form>
                 <button onClick={search}>Submit</button>
             </div>
+            <ul>
+                {anime.map((item) => (
+                    <li>{item.title}</li>
+                ))}
+            </ul>
         </div>
     );
 }

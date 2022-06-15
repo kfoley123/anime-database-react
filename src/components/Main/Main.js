@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import AnimeCard from "../AnimeCard/AnimeCard";
 
 export default function Main() {
     const [searchBoxText, setSearchBoxText] = useState("");
@@ -80,11 +81,12 @@ export default function Main() {
                 </form>
                 <button onClick={search}>Submit</button>
             </div>
-            <ul>
-                {anime.map((item) => (
-                    <li>{item.title}</li>
+
+            <div>
+                {anime.map((item, i) => (
+                    <AnimeCard key={i} animeItem={item} />
                 ))}
-            </ul>
+            </div>
         </div>
     );
 }

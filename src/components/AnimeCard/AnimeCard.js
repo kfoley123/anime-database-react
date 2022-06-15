@@ -3,7 +3,7 @@ import React from "react";
 export default function AnimeCard(props) {
     console.log(props.animeItem);
     return (
-        <div className="max-w-lg rounded overflow-hidden shadow-lg mb-10 p-5 mx-6">
+        <div className="max-w-lg min-w-[32rem] rounded overflow-hidden shadow-lg mb-10 p-5 mx-6">
             <div className="flex">
                 <img
                     className=""
@@ -36,6 +36,16 @@ export default function AnimeCard(props) {
                     </p>
                 ))}
             </div>
+            {props.animeItem.trailer.embed_url && (
+                <iframe
+                    src={props.animeItem.trailer.embed_url}
+                    frameborder="0"
+                    allow=" encrypted-media"
+                    allowfullscreen
+                    title="video"
+                />
+            )}
+
             <p>{props.animeItem.synopsis}</p>
         </div>
     );

@@ -45,7 +45,7 @@ export default function Main() {
                 <div className="flex">
                     <form className="flex" id="searchForm">
                         <input
-                            className="bg-rose-200 hover:bg-rose-400 text-black-700 font-semibold hover:text-white py-2 px-4 border border-amber-900  rounded mx-4"
+                            className="bg-orchid-crayola hover:bg-pearly-purple  placeholder-black text-black-800 font-semibold hover:text-white py-2 px-4 border border-amber-900  rounded mx-4"
                             type="text"
                             id="search"
                             name="search"
@@ -53,7 +53,7 @@ export default function Main() {
                             onChange={handleTextBox}
                         />
                         <select
-                            className="bg-rose-200 hover:bg-rose-400 text-black-700 font-semibold hover:text-white py-2 px-4 border border-amber-900 hover:border-transparent rounded mx-4"
+                            className="bg-orchid-crayola hover:bg-pearly-purple text-black-700 font-semibold hover:text-white py-2 px-4 border border-amber-900 hover:border-transparent rounded mx-4"
                             id="rating"
                             name="rating"
                             onChange={handleRating}
@@ -72,7 +72,7 @@ export default function Main() {
                         </select>
 
                         <select
-                            className="bg-rose-200 hover:bg-rose-400 text-black-700 font-semibold hover:text-white py-2 px-4 border border-amber-900 hover:border-transparent rounded mx-4"
+                            className="bg-orchid-crayola hover:bg-pearly-purple text-black-700 font-semibold hover:text-white py-2 px-4 border border-amber-900 hover:border-transparent rounded mx-4"
                             id="animeType"
                             name="animeType"
                             onChange={handleAnimeType}
@@ -87,7 +87,7 @@ export default function Main() {
                         </select>
 
                         <select
-                            className="bg-rose-200 hover:bg-rose-400 text-black-700 font-semibold hover:text-white py-2 px-4 border border-amber-900 hover:border-transparent rounded mx-4"
+                            className="bg-orchid-crayola hover:bg-pearly-purple text-black-700 font-semibold hover:text-white py-2 px-4 border border-amber-900 hover:border-transparent rounded mx-4"
                             id="status"
                             name="status"
                             onChange={handleStatus}
@@ -99,7 +99,7 @@ export default function Main() {
                         </select>
                     </form>
                     <button
-                        className="bg-rose-200 hover:bg-rose-400 text-black-700 font-semibold hover:text-white py-2 px-4 border border-amber-900 hover:border-transparent rounded"
+                        className="bg-orchid-crayola hover:bg-pearly-purple text-black-700 font-semibold hover:text-white py-2 px-4 border border-amber-900 hover:border-transparent rounded"
                         onClick={search}
                     >
                         Submit

@@ -34,55 +34,80 @@ export default function Main() {
 
     return (
         <div>
-            <h1>Anime Finder</h1>
-            <h2>Search for anime below:</h2>
+            <div className="bgImage h-80">
+                <h1 className="font-medium leading-tight text-5xl mt-0 mb-2 text-blue-600">
+                    Anime Finder
+                </h1>
+                <h2 className="font-medium leading-tight text-3xl mt-0 mb-2 text-blue-600">
+                    Search for anime below:
+                </h2>
 
-            <div>
-                <form id="searchForm">
-                    <input
-                        type="text"
-                        id="search"
-                        name="search"
-                        placeholder="Search Box"
-                        onChange={handleTextBox}
-                    />
-                    <select id="rating" name="rating" onChange={handleRating}>
-                        <option>Rating</option>
-                        <option value="g">G - All Ages</option>
-                        <option value="pg">PG - Children</option>
-                        <option value="pg13">PG-13 - Teens 13 or older</option>
-                        <option value="r17">
-                            R - 17+ (violence & profanity)
-                        </option>
-                        <option value="r">R+ - Mild Nudity</option>
-                        <option value="rx">Rx - Hentai</option>
-                    </select>
+                <div className="flex">
+                    <form className="flex" id="searchForm">
+                        <input
+                            className="rounded shadow-md mx-4"
+                            type="text"
+                            id="search"
+                            name="search"
+                            placeholder="Search Box"
+                            onChange={handleTextBox}
+                        />
+                        <select
+                            className="rounded shadow-md mx-4"
+                            id="rating"
+                            name="rating"
+                            onChange={handleRating}
+                        >
+                            <option>Rating</option>
+                            <option value="g">G - All Ages</option>
+                            <option value="pg">PG - Children</option>
+                            <option value="pg13">
+                                PG-13 - Teens 13 or older
+                            </option>
+                            <option value="r17">
+                                R - 17+ (violence & profanity)
+                            </option>
+                            <option value="r">R+ - Mild Nudity</option>
+                            <option value="rx">Rx - Hentai</option>
+                        </select>
 
-                    <select
-                        id="animeType"
-                        name="animeType"
-                        onChange={handleAnimeType}
+                        <select
+                            className="rounded shadow-md mx-4"
+                            id="animeType"
+                            name="animeType"
+                            onChange={handleAnimeType}
+                        >
+                            <option>Anime Type</option>
+                            <option value="tv">TV Show</option>
+                            <option value="movie">Movie</option>
+                            <option value="ova">Ova</option>
+                            <option value="special">Special</option>
+                            <option value="ona">Ona</option>
+                            <option value="music">Music</option>
+                        </select>
+
+                        <select
+                            className="rounded shadow-md bg-rose-300 mx-4"
+                            id="status"
+                            name="status"
+                            onChange={handleStatus}
+                        >
+                            <option>Status</option>
+                            <option value="airing">Airing</option>
+                            <option value="complete">Complete</option>
+                            <option value="upcoming">Upcoming</option>
+                        </select>
+                    </form>
+                    <button
+                        className="bg-rose-300 hover:bg-rose-500 text-black-700 font-semibold hover:text-white py-2 px-4 border border-rose-500 hover:border-transparent rounded"
+                        onClick={search}
                     >
-                        <option>Anime Type</option>
-                        <option value="tv">TV Show</option>
-                        <option value="movie">Movie</option>
-                        <option value="ova">Ova</option>
-                        <option value="special">Special</option>
-                        <option value="ona">Ona</option>
-                        <option value="music">Music</option>
-                    </select>
-
-                    <select id="status" name="status" onChange={handleStatus}>
-                        <option>Status</option>
-                        <option value="airing">Airing</option>
-                        <option value="complete">Complete</option>
-                        <option value="upcoming">Upcoming</option>
-                    </select>
-                </form>
-                <button onClick={search}>Submit</button>
+                        Submit
+                    </button>
+                </div>
             </div>
 
-            <div>
+            <div className="py-30 flex flex-row flex-wrap mb-10">
                 {anime.map((item, i) => (
                     <AnimeCard key={i} animeItem={item} />
                 ))}

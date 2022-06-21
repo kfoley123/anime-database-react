@@ -34,7 +34,7 @@ export default function Main() {
 
     return (
         <div>
-            <div className="bgImage h-80">
+            <div className="bgImage h-80 mb-5">
                 <h1 className="font-medium leading-tight text-5xl mt-0 mb-2 text-blue-600">
                     Anime Finder
                 </h1>

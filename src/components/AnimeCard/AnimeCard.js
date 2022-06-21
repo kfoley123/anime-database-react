@@ -4,11 +4,12 @@ import "./AnimeCard.css";
 export default function AnimeCard(props) {
     return (
         <div className="wrap max-w-lg min-w-[32rem] rounded overflow-hidden shadow-lg mb-10 p-5 mx-6">
-            <div className="">
+            <div>
                 <div className="flex">
                     <img
                         className=""
                         src={props.animeItem.images.jpg.image_url}
+                        alt={props.animeItem.title}
                     ></img>
 
                     <div className="p-5">

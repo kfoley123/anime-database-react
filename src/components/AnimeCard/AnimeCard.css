@@ -12,8 +12,6 @@
     color: #fff;
     visibility: hidden;
     opacity: 0;
-
-    /* transition effect. not necessary */
     transition: opacity 0.2s, visibility 0.2s;
 }
 
@@ -29,6 +27,6 @@
     padding: 20px;
 }
 
-.wrap:hover .inimeCard--popupElement {
+.wrap:hover .animeCard--popupElement {
     transform: translateY(0);
 }

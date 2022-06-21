@@ -15,9 +15,3 @@ module.exports = {
     },
     plugins: [],
 };
-
-// carolina-blue: #0A9FFDff;
-// --blue-jeans: #42B7FEff;
-// --snow: #FCFAFCff;
-// --african-violet: #A27CA9ff;
-// --orchid-crayola: #F69CE2ff

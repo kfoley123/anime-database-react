@@ -2,7 +2,6 @@ import React from "react";
 import "./AnimeCard.css";
 
 export default function AnimeCard(props) {
-    console.log(props.animeItem);
     return (
         <div className="wrap max-w-lg min-w-[32rem] rounded overflow-hidden shadow-lg mb-10 p-5 mx-6">
             <div className="">

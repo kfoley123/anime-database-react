@@ -35,10 +35,10 @@ export default function Main() {
     return (
         <div>
             <div className="bgImage h-80 mb-5">
-                <h1 className="font-medium leading-tight text-5xl mt-0 mb-2 text-blue-600">
+                <h1 className="font-medium px-10 leading-tight text-5xl mt-0 mb-2 text-blue-600">
                     Anime Finder
                 </h1>
-                <h2 className="font-medium leading-tight text-3xl mt-0 mb-2 text-blue-600">
+                <h2 className="font-medium px-10 leading-tight text-3xl mt-0 mb-2 text-blue-600">
                     Search for anime below:
                 </h2>
 
@@ -49,7 +49,7 @@ export default function Main() {
                             type="text"
                             id="search"
                             name="search"
-                            placeholder="Search Box"
+                            placeholder="Keyword"
                             onChange={handleTextBox}
                         />
                         <select

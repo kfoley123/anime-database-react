@@ -23,8 +23,8 @@ export default function Main() {
         setStatus(event.target.value);
     }
 
-    function search() {
-        console.log({ searchBoxText, rating, animeType, status });
+    function search(e) {
+        e.preventDefault();
         fetch(
             `https://api.jikan.moe/v4/anime?q=${searchBoxText}&rating=${rating}&type=${animeType}&status=${status}`
         )
@@ -43,7 +43,7 @@ export default function Main() {
                 </h2>
 
                 <div className="flex">
-                    <form className="flex" id="searchForm">
+                    <form className="flex" id="searchForm" onSubmit={search}>
                         <input
                             className="bg-orchid-crayola hover:bg-pearly-purple  placeholder-black text-black-800 font-semibold hover:text-white py-2 px-4 border border-amber-900  rounded mx-4"
                             type="text"

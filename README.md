@@ -32,6 +32,8 @@ Ever wonder if your favorite series has any movies, OVA's or Specials? Simply en
 
 Fix warning for invalid DOM- frameborder & allowfullscreen
 
+---
+
 ## Netlify Link
 
 https://anime-finder.kortney.site

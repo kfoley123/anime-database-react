@@ -7,7 +7,7 @@ export default function Main() {
     const [animeType, setAnimeType] = useState("");
     const [status, setStatus] = useState("");
     const [anime, setAnime] = useState([]);
-    let fetchPath;
+
 
     function handleTextBox(event) {
         setSearchBoxText(event.target.value);
@@ -28,7 +28,7 @@ export default function Main() {
     function search(e) {
         e.preventDefault();
         fetch(
-            `https://api.jikan.moe/v4/anime?q= + ${ searchBoxText ? searchBoxText : "" } + ${ rating? '&rating=$'+rating : ""} + ${animeType? '&type='+animeType : ""} + ${ status? '&status='+status : ""}`
+            `https://api.jikan.moe/v4/anime?q=${ + searchBoxText ? searchBoxText : "" + rating? '&rating='+rating : "" + animeType? '&type='+animeType : "" + status? '&status='+status : ""}`
         )
             .then((response) => response.json())
             .then((response) => setAnime(response.data));
